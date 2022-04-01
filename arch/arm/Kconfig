@@ -782,6 +782,18 @@ config ARCH_LPC32XX
 	select SUPPORT_SPL
 	imply CMD_DM
 
+config ARCH_NUC97X
+	bool "Nuvoton NUC9xx platform"
+	select CPU_ARM926EJS
+	select DM
+	select DM_GPIO
+	select DM_SERIAL
+	select GPIO_EXTRA_HEADER
+	select SPL_DM if SPL
+	select SUPPORT_SPL
+	select OF_CONTROL	
+	imply CMD_DM	
+
 config ARCH_IMX8
 	bool "NXP i.MX8 platform"
 	select ARM64
@@ -2043,6 +2055,8 @@ source "arch/arm/cpu/armv8/Kconfig"
 source "arch/arm/mach-imx/Kconfig"
 
 source "arch/arm/mach-nexell/Kconfig"
+
+source "arch/arm/mach-nuc97x/Kconfig"
 
 source "board/armltd/total_compute/Kconfig"
 

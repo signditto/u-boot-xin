@@ -1,0 +1,10 @@
+if TARGET_NUC972_XIN
+
+
+config SYS_CONFIG_NAME
+	default "nuc970_evb" 
+
+
+
+endif
+

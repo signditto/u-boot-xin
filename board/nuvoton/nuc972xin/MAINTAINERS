@@ -1,0 +1,6 @@
+NUC972 XIN BOARD
+M:	LIU JUN HUA
+S:	Maintained
+F:	board/nuvoton/nuc970xin/
+F:	include/configs/nuc970_evb.h
+F:	configs/nuc972_xin_defconfig

@@ -1,0 +1,35 @@
+if ARCH_NUC97X
+
+config SYS_SOC
+	default "nuc970"
+
+config SYS_VENDOR
+	default "nuvoton"
+
+
+choice
+	prompt "NUC97X board select"
+
+
+config TARGET_NUC972_XIN
+	bool "NUC972 Xin board"
+
+
+
+endchoice
+
+config SYS_BOARD
+	default "nuc972xin" if TARGET_NUC972_XIN
+
+config NUC970
+	bool
+	default y
+	
+config NUC970_HW_CHECKSUM
+	bool
+	default y if TARGET_NUC970_TOMATO
+	
+
+source "board/nuvoton/nuc972xin/Kconfig"
+
+endif
